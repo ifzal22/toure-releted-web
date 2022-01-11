@@ -5,8 +5,8 @@ import './ServicesAll.css';
 const ServicesAll = ({ service }) => {
     const { _id, name, price, about, image } = service;
     return (
-        <div className='col-md-4 my-2'>
-               <div className="service pb-3 shadow">
+        <div className='col-md-4 my-2 shadow1 '>
+               <div className="service pb-3 shadow ">
             <img className='rounded-3 '  src={image} alt="" />
             <h3>{name}</h3>
             <h5>Price: {price}</h5>

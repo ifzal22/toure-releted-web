@@ -5,14 +5,16 @@ import './MyOrder.css';
 const MyOrder = () => {
     const {user} = useAuth();
     const [orders , setOrder]= useState([]);
+
+    const [isDeleted, setDeleted] = useState(null);
     
     const email = `${user.email}`;
     console.log(user)
     useEffect(() => {
-        fetch(`http://localhost:5000/myOrder/${email}`)
+        fetch(`https://enigmatic-hollows-30656.herokuapp.com/${email}`)
             .then(res => res.json())
             .then(data => setOrder(data))
-    }, [])
+    }, [isDeleted])
    console.log(email)
 
 
@@ -21,7 +23,7 @@ const MyOrder = () => {
    const handleDeleteOrder = (id) => {
     const proceed = window.confirm('Are You Deleted This Order?');
     if (proceed) {
-        fetch(`http://localhost:5000/deleteOrder/${id}`, {
+        fetch(`https://enigmatic-hollows-30656.herokuapp.com/${id}`, {
         method: 'DELETE',
         headers: {
             content: 'application/json'
@@ -29,9 +31,12 @@ const MyOrder = () => {
     }).then(res => res.json())
         .then(result => {
             if (result.acknowledged) {
+                setDeleted(true)
                 console.log(result.data)
                 alert('Deleted successfully');
                
+            } else{
+                setDeleted(false)
             }
            
         })
@@ -43,7 +48,7 @@ const MyOrder = () => {
 
             <h1 className='text-center'>My Order'S </h1>
             {
-               orders.map((order,index) => <div>
+               orders.map((order,index) => <div className='my-2'>
                     <div className='shadow mx-auto w-50  '>
 
 
@@ -52,7 +57,7 @@ const MyOrder = () => {
                     <h1>Order: {index + 1}</h1>
                 <h1>  {order.name }</h1>
                 <p>Order Number :{order.number} </p>
-                <p>Order: {order.pending}</p>
+                <p>Order: {order.status}</p>
 <p>Client Email: {order.email}</p>
 
                 </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    Redirect, Route, useLocation
+  Redirect, Route, useLocation
 } from "react-router-dom";
 import useAuth from '../Hooks/useAuth';
 const PriveatRout = ({ children, ...rest }) => {

@@ -5,3 +5,11 @@
 .service img{
     width: 100%;
 }
+
+.BoxSHADOW{
+    transition: 0.5s;
+}
+.BoxSHADOW :hover{
+    box-shadow: 5px 10px 8px 10px #c5a3a3;
+
+}

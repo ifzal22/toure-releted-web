@@ -13,7 +13,7 @@ data.status = "pending";
 data.email = `${user?.email}`;
 
 
-fetch('http://localhost:5000/orders',{
+fetch('https://enigmatic-hollows-30656.herokuapp.com/orders',{
     method: "POST",
     headers: {
         "content-type": "application/json",

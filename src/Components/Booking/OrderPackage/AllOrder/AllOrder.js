@@ -3,11 +3,12 @@ import AllOrderShow from './AllOrderShow/AllOrderShow';
 
 const AllOrder = () => {
     const [allOrders, setAllOrders] = useState([]);
+    const [isDeleted, setIsDeleted] = useState(false)
     useEffect(()=>{
-        fetch('http://localhost:5000/allOrders')
+        fetch('https://enigmatic-hollows-30656.herokuapp.com/allOrders')
         .then(res => res.json())
         .then(data => setAllOrders(data));
-    },[])
+    },[isDeleted])
     return (
         <div>
             <div>
@@ -18,7 +19,7 @@ const AllOrder = () => {
       <div>
    
    {/* <h1 className=''>Order {index} </h1>  */}
-        <AllOrderShow key={allOrder._id} allOrder={allOrder} index={index}  ></AllOrderShow>
+        <AllOrderShow key={allOrder._id} allOrder={allOrder} index={index} setIsDeleted={setIsDeleted}  ></AllOrderShow>
       </div>
        
     )

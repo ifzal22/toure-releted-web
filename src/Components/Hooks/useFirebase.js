@@ -39,7 +39,8 @@ const unSubScribe = useEffect(()=>{
             setUser({})
         }
     })
-})
+    return () => unSubScribe
+},[])
 
 // LOG OUT
 const handelLOgOut = () => {

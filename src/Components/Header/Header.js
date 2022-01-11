@@ -35,7 +35,7 @@ const Header = () => {
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link NAVHOVER" to="/ServicesAll" >Services</Link>
+                <Link className="nav-link NAVHOVER" to="/AllServicesShow" >Services</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link NAVHOVER" href="#" to="/myOrder">My Order'S</Link>

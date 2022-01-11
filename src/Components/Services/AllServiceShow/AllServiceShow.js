@@ -1,32 +1,30 @@
 import React, { useEffect, useState } from 'react';
-import ServicesAll from '../ServicesAll/ServicesAll';
-import './Services.css';
+import ServicesAll from '../../ServicesAll/ServicesAll';
+import './AllServicesShow.css';
 
-
-
-
-
-
-const Services = () => {
+const AllServiceShow = () => {
     const [services, setServices] = useState([]);
     useEffect(()=>{
         fetch('https://enigmatic-hollows-30656.herokuapp.com/services')
         .then(res => res.json())
-        .then(data => setServices(data.slice(0, 6)));
+        .then(data => setServices(data.slice()));
     },[])
     return (
         <div>
+            
+
+            <div>
             <div >
                 <h1 className='text-center'>Popular Packages</h1>
             </div>
           
               { 
-services.length ===0 ? <div className="spinner-border text-danger " role="status">
+services.length ===0 ? <div className="spinner-border text-danger mx-auto text-center" role="status">
 <span className="sr-only text-center">Loading...</span>
 </div>
 
 :
-<div className='row container mx-auto '>
+<div className='row container mx-auto'>
 {
     services.map(service =>
        <ServicesAll key={service._id}
@@ -37,7 +35,9 @@ services.length ===0 ? <div className="spinner-border text-danger " role="status
               }
            
         </div>
+
+        </div>
     );
 };
 
-export default Services;
+export default AllServiceShow;

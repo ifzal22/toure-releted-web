@@ -1,7 +1,7 @@
 import React from 'react';
 import './AllOrderShow.css';
 
-const AllOrderShow = ({allOrder,index}) => {
+const AllOrderShow = ({allOrder,index,setIsDeleted}) => {
   
   
   
@@ -10,7 +10,7 @@ const AllOrderShow = ({allOrder,index}) => {
     const handleDeleteOrder = (id) => {
         const proceed = window.confirm('Are You Deleted This Order?');
         if (proceed) {
-            fetch(`http://localhost:5000/deleteOrder/${id}`, {
+            fetch(`https://enigmatic-hollows-30656.herokuapp.com/${id}`, {
             method: 'DELETE',
             headers: {
                 content: 'application/json'
@@ -19,9 +19,12 @@ const AllOrderShow = ({allOrder,index}) => {
             .then(result => {
                console.log(result)
                if (result.acknowledged) {
+                setIsDeleted(true)
                 console.log(result.data)
                 alert('Deleted successfully');
                
+            }else{
+                setIsDeleted(false)
             }
             })
         // console.log(id);
@@ -29,6 +32,23 @@ const AllOrderShow = ({allOrder,index}) => {
     }
 
 
+
+    const handleConfirm = (id)=>{
+        
+fetch(`https://enigmatic-hollows-30656.herokuapp.com//${id}`,{
+    method: 'PUT',
+    headers: {
+        content: 'application/json'
+    }
+}).then(res => res.json())
+.then(result => {
+    console.log(result)
+    if (result.matchedCount) {
+        alert('Confirmed successfully ') 
+    }
+})
+
+    }
 
     
     return (
@@ -51,7 +71,7 @@ const AllOrderShow = ({allOrder,index}) => {
 
 <div className='BUTTON'>
 <button  onClick={() => handleDeleteOrder(allOrder._id)} type="button" class="btn btn-danger">Delete</button>
-<button type="button" class="btn btn-warning">Update</button>
+<button onClick={()=> handleConfirm(allOrder._id) } type="button" class="btn btn-warning">Confirm</button>
 </div>
 
 </div>

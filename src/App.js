@@ -10,6 +10,8 @@ import AuthProvider from './Components/Context/AuthProvider';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
+import PriveatRout from './Components/Privet/Priveat';
+import AllServiceShow from './Components/Services/AllServiceShow/AllServiceShow';
 
 function App() {
   return (
@@ -28,20 +30,26 @@ function App() {
       <Home></Home>
     </Route>
    
-    <Route exact path="/AddServices">
+    <PriveatRout exact path="/AddServices">
    
    <AddServices></AddServices>
-    </Route>
-    <Route exact path="/AllOrder">
-      <AllOrder></AllOrder>
-    </Route>
-<Route exact path="/myOrder">
-  <MyOrder></MyOrder>
-</Route>
+    </PriveatRout>
 
-    <Route exact path="/booking/:serviceId">
-      <Booking></Booking>
+
+
+    <Route exact path="/AllServicesShow">
+      <AllServiceShow></AllServiceShow>
     </Route>
+    <PriveatRout exact path="/AllOrder">
+      <AllOrder></AllOrder>
+    </PriveatRout>
+<PriveatRout exact path="/myOrder">
+  <MyOrder></MyOrder>
+</PriveatRout>
+
+    <PriveatRout exact path="/booking/:serviceId">
+      <Booking></Booking>
+    </PriveatRout>
     
 
 <Route>
