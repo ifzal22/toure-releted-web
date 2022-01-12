@@ -15,7 +15,8 @@ const MyOrder = () => {
             .then(res => res.json())
             .then(data => setOrder(data))
     }, [isDeleted])
-   console.log(email)
+
+   console.log(orders)
 
 
 // DELETED 
@@ -46,7 +47,7 @@ const MyOrder = () => {
     return (
         <div>
 
-            <h1 className='text-center'>My Order'S </h1>
+            <h1 className='text-center'>My Order'S <span className='text-warning'> {orders.length}</span> </h1>
 
 
 
