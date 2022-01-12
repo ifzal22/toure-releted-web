@@ -7,6 +7,7 @@ import Booking from './Components/Booking/Booking';
 import AllOrder from './Components/Booking/OrderPackage/AllOrder/AllOrder';
 import MyOrder from './Components/Booking/OrderPackage/MyOrder/MyOrder';
 import AuthProvider from './Components/Context/AuthProvider';
+import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
@@ -57,6 +58,7 @@ function App() {
 </Route>
 
   </Switch>
+  <Footer></Footer>
 </BrowserRouter>
     </AuthProvider>
     </div>

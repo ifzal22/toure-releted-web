@@ -53,6 +53,7 @@ const handelLOgOut = () => {
 return{
     LogingWidthGoogle,
     user,
+    setUser,
     error,
     handelLOgOut,
 }

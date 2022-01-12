@@ -5,7 +5,7 @@ import './AllServicesShow.css';
 const AllServiceShow = () => {
     const [services, setServices] = useState([]);
     useEffect(()=>{
-        fetch('https://enigmatic-hollows-30656.herokuapp.com/services')
+        fetch('https://frozen-bayou-03992.herokuapp.com/services')
         .then(res => res.json())
         .then(data => setServices(data.slice()));
     },[])

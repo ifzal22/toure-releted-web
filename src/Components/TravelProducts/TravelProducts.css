@@ -1,0 +1,9 @@
+h1{
+    color: rgb(255, 0, 128);
+}
+.Shadow2{
+    transition: 0.5s;
+}
+.Shadow2:hover{
+    box-shadow: 5px 10px 8px 10px #b9b5b5;
+}

@@ -9,27 +9,31 @@ import './Login.css';
 
 initializeFirebaseApp()
 const Login = () => {
-    const { LogingWidthGoogle } = useAuth();
+    const { LogingWidthGoogle , user,
+        setUser,} = useAuth();
 
-    const location = useLocation();
-    const history = useHistory();
-    const redirect_uri = location?.state?.from || '/'
+        const history= useHistory()
+        const location = useLocation()
+        const url= location.state?.from || "/home"
 
-
+    
     const handelGoogleLOgin = () =>{
         LogingWidthGoogle()
         .then(result =>{
-            history.push(redirect_uri)
+            console.log(result)
+            // const user = userCradential.user;
+            setUser(result.user)
+            history.push(url)
         })
     }
     return (
         
         <div  className='' >
            <div className='mx-auto LOGIN'>
-           <h1 className='text-center'>Google Login</h1>
+           <h1 className='text-center bg-white shadow-lg p-4 '>Google Login</h1>
 
-<div className='mx-auto text-center my-5'>
-<button onClick={handelGoogleLOgin} type="button" class="btn btn-danger"><i class="fab fa-google"></i></button>
+<div className='mx-auto text-center my-10'>
+<button onClick={handelGoogleLOgin} type="button" className="btn btn-white shadow-lg my-5 p-5 BNT"><i className="fab fa-google"></i></button>
 </div>
            </div>
         </div>

@@ -7,7 +7,7 @@ const AddServices = () => {
     const { register, handleSubmit,reset }=useForm();
     const onSubmit = data =>{
         console.log(data);
-        axios.post('https://enigmatic-hollows-30656.herokuapp.com/services',data)
+        axios.post('https://frozen-bayou-03992.herokuapp.com/services',data)
         .then(res =>{
             if (res.data.insertedId) {
                 console.log(res.data)

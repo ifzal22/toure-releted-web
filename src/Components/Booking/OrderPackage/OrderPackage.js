@@ -13,7 +13,7 @@ data.status = "pending";
 data.email = `${user?.email}`;
 
 
-fetch('https://enigmatic-hollows-30656.herokuapp.com/orders',{
+fetch('https://frozen-bayou-03992.herokuapp.com/orders',{
     method: "POST",
     headers: {
         "content-type": "application/json",

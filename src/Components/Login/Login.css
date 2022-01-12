@@ -1,6 +1,16 @@
 .LOGIN{
     margin: auto;
-    background-color: rgb(191, 207, 207);
+    background-color: rgb(171, 179, 179);
     height: 400px;
     justify-content: center;
+}
+.BNT i{
+font-size: 35px;
+color: rgb(255, 0, 149);
+transition: 0.5s;
+}
+
+.BNT i:hover{
+    color: yellow;
+    margin-top: -5px;
 }

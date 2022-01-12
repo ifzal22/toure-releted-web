@@ -11,7 +11,7 @@ const MyOrder = () => {
     const email = `${user.email}`;
     console.log(user)
     useEffect(() => {
-        fetch(`https://enigmatic-hollows-30656.herokuapp.com/${email}`)
+        fetch(`https://frozen-bayou-03992.herokuapp.com/myOrder/${email}`)
             .then(res => res.json())
             .then(data => setOrder(data))
     }, [isDeleted])
@@ -23,7 +23,7 @@ const MyOrder = () => {
    const handleDeleteOrder = (id) => {
     const proceed = window.confirm('Are You Deleted This Order?');
     if (proceed) {
-        fetch(`https://enigmatic-hollows-30656.herokuapp.com/${id}`, {
+        fetch(`https://frozen-bayou-03992.herokuapp.com/deleteOrder/${id}`, {
         method: 'DELETE',
         headers: {
             content: 'application/json'
@@ -47,6 +47,9 @@ const MyOrder = () => {
         <div>
 
             <h1 className='text-center'>My Order'S </h1>
+
+
+
             {
                orders.map((order,index) => <div className='my-2'>
                     <div className='shadow mx-auto w-50  '>
@@ -72,6 +75,10 @@ const MyOrder = () => {
                     </div>
                 </div>)
             }
+
+
+
+            
         </div>
     );
         }

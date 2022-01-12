@@ -5,7 +5,9 @@ const AllOrder = () => {
     const [allOrders, setAllOrders] = useState([]);
     const [isDeleted, setIsDeleted] = useState(false)
     useEffect(()=>{
-        fetch('https://enigmatic-hollows-30656.herokuapp.com/allOrders')
+        fetch('https://frozen-bayou-03992.herokuapp.com/allOrders')
+
+        
         .then(res => res.json())
         .then(data => setAllOrders(data));
     },[isDeleted])

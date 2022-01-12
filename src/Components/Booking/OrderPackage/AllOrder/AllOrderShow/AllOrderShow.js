@@ -10,7 +10,7 @@ const AllOrderShow = ({allOrder,index,setIsDeleted}) => {
     const handleDeleteOrder = (id) => {
         const proceed = window.confirm('Are You Deleted This Order?');
         if (proceed) {
-            fetch(`https://enigmatic-hollows-30656.herokuapp.com/${id}`, {
+            fetch(`https://frozen-bayou-03992.herokuapp.com/deleteOrder/${id}`, {
             method: 'DELETE',
             headers: {
                 content: 'application/json'
@@ -35,7 +35,7 @@ const AllOrderShow = ({allOrder,index,setIsDeleted}) => {
 
     const handleConfirm = (id)=>{
         
-fetch(`https://enigmatic-hollows-30656.herokuapp.com//${id}`,{
+fetch(`https://frozen-bayou-03992.herokuapp.com/CnfirmOrder/${id}`,{
     method: 'PUT',
     headers: {
         content: 'application/json'
