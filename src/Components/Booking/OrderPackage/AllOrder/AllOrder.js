@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './AllOrder.css';
 import AllOrderShow from './AllOrderShow/AllOrderShow';
 
 const AllOrder = () => {
@@ -13,7 +14,7 @@ const AllOrder = () => {
     },[isDeleted])
     return (
         <div>
-            <div>
+            <div className="CONTAIN">
             <h1 className='text-center text-danger'>All Orders  {allOrders.length} </h1>
 
 {

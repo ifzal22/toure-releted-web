@@ -7,3 +7,6 @@ h1{
 .Shadow2:hover{
     box-shadow: 5px 10px 8px 10px #b9b5b5;
 }
+.PICK:hover img{
+    transform: scale(0.9);
+}

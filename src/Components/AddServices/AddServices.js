@@ -18,18 +18,26 @@ const AddServices = () => {
         })
     }
     return (
-        <div className='shadow'>
+        <div className='shadow CONTAIN'>
             
    
 
             <div className="add-service MARGE shadow">
             <h2 className='text-center bg-denger'>Please Add a Service</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <input {...register("name", { required: true, maxLength: 20 })} placeholder="Name" />
-                <textarea {...register("description")} placeholder="Description" />
-                <input type="number" {...register("price")} placeholder="price" />
-                <input {...register("img")} placeholder="image url" />
-                <input type="submit" />
+                <input 
+            className="box2"
+                
+                {...register("name", { required: true, maxLength: 20 })} placeholder="Name" />
+                <textarea 
+                className="shadow p-4 rounded-3"
+                placeholder="your message"cols="10" rows=""{...register("description")}  />
+                <input 
+                className="box2"
+                type="number" {...register("price")} placeholder="price" />
+                <input
+                className="box2" {...register("img")} placeholder="image url" />
+                <input className="btn" type="submit" />
             </form>
         </div>
         </div>

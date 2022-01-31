@@ -8,7 +8,7 @@ import './Header.css';
 const Header = () => {
     const { user, handelLOgOut } = useAuth();
     return (
-        <div className=''>
+        <div className='header'>
              <nav className="navbar navbar-expand-lg     navbar-light  NAVIGETION">
         <div className="container-fluid">
 
@@ -28,7 +28,7 @@ const Header = () => {
           </button>
 
 
-          <div className="collapse navbar-collapse  NAVVER" id="navbarResponsive">
+          <div className="collapse navbar-collapse  NAVVER navbar" id="navbarResponsive">
             <ul className="navbar-nav ms-auto justify-content-center ">
               <li className="nav-item active">
                 <Link className="nav-link NAVHOVER " to="/home" style={{}} href="#">Home</Link>

@@ -1,5 +1,5 @@
 .service{
-    background-color: rgb(226, 241, 241);
+    background-color: rgb(243, 243, 243);
     border-radius:20px ;
 }
 .service img{
@@ -13,3 +13,15 @@
     box-shadow: 5px 10px 8px 10px #c5a3a3;
 
 }
+
+
+
+
+
+
+
+
+.vehicles .vehicles-slider{
+    padding-bottom: 5rem;
+}
+

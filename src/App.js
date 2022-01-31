@@ -7,12 +7,12 @@ import Booking from './Components/Booking/Booking';
 import AllOrder from './Components/Booking/OrderPackage/AllOrder/AllOrder';
 import MyOrder from './Components/Booking/OrderPackage/MyOrder/MyOrder';
 import AuthProvider from './Components/Context/AuthProvider';
-import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
 import PriveatRout from './Components/Privet/Priveat';
 import AllServiceShow from './Components/Services/AllServiceShow/AllServiceShow';
+import Services from './Components/Services/Services';
 
 function App() {
   return (
@@ -36,8 +36,9 @@ function App() {
    <AddServices></AddServices>
     </PriveatRout>
 
-
-
+<Route exact path="services">
+  <Services></Services>
+</Route>
     <Route exact path="/AllServicesShow">
       <AllServiceShow></AllServiceShow>
     </Route>
@@ -58,7 +59,7 @@ function App() {
 </Route>
 
   </Switch>
-  <Footer></Footer>
+ 
 </BrowserRouter>
     </AuthProvider>
     </div>

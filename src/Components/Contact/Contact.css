@@ -1,20 +1,3 @@
-/* form input{
-    margin: 10px;
-    width: 98%;
-    padding: 5px;
-    border-radius: 50px;
-    background-color: aquamarine;
-    border: 0px;
-    transition: 0.5s;
-    box-shadow:1px -1px 20px 0px #dbd9d9;;
-
-    
-}
-form input:hover{
-background-color: rgb(249, 242, 255);
-box-shadow:1px -1px 20px 0px #b1adad;
-} */
-
 
 .contact .row{
     display: flex;
@@ -59,13 +42,4 @@ box-shadow:1px -1px 20px 0px #b1adad;
 .contact .row form textarea{
     height:15rem;
     resize: none;
-}
-
-
-
-.AUTOimg img{
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
 }

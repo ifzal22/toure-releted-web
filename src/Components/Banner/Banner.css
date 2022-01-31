@@ -1,7 +1,39 @@
 .IMG img{
-    height: 500px;
+    height: 650%;
+    width:100%;
 }
 .MARGIN{
     margin-top: 10px;
     top: 0;
+}
+
+.home img{
+    width:100%;
+    margin:1rem 0rem;
+    padding: 5px;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding:.8rem 3rem;
+    background:var(--light-yellow);
+    color:var(--black);
+    cursor: pointer;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn:hover{
+    background:var(--yellow);
+    color: aliceblue;
+}
+
+.home h3{
+    color:var(--black);
+    font-size: 7.5vw;
+    text-transform: uppercase;
 }

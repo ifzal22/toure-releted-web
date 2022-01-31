@@ -45,7 +45,7 @@ const MyOrder = () => {
     }
 }
     return (
-        <div>
+        <div className="CONTAIN">
 
             <h1 className='text-center'>My Order'S <span className='text-warning'> {orders.length}</span> </h1>
 
@@ -69,7 +69,7 @@ const MyOrder = () => {
 
 <div className='text-center'>
 <button className=''  onClick={() => handleDeleteOrder(order._id)} type="button" class="btn btn-danger">Delete</button>
-<button type="button" class="btn btn-warning">Update</button>
+{/* <button type="button" class="btn btn-warning">Update</button> */}
 </div>
 
 

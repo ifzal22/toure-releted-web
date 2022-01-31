@@ -42,8 +42,8 @@ fetch('https://frozen-bayou-03992.herokuapp.com/orders',{
         }) */
     }
     return (
-        <div className=''>
-            <div className="from-section">
+        <div className='contact'>
+            <div className="from-section row">
                 <h3 className="fw-bold">Purchase Package</h3>
                 <form className='shadow' onSubmit={handleSubmit(onSubmit)}>
 {/* <div className='mx-auto AUTOimg'>
@@ -51,20 +51,24 @@ fetch('https://frozen-bayou-03992.herokuapp.com/orders',{
      {...register("name", { required: true })}/>
 </div> */}
                     <input
+                 className="box"
                        value={user?.displayName}
                         {...register("name", { required: true })}
 
                     /><br />
                     <input
+                    className="box"
                       value={user?.email}
                         {...register("email", { required: true })}
                     /><br />
                     <input
+                    className="box"
                         value={service?.packageName}
                         {...register("name", { required: true })}
 
                     /><br />
                     <input
+                    className="box"
                         placeholder="Your Number"
                         {...register("number", { required: true })}
                     />
@@ -72,7 +76,7 @@ fetch('https://frozen-bayou-03992.herokuapp.com/orders',{
                     <br />
 
                     <br />
-                    <input className="submit-btn" type="submit" />
+                    <input  className="submit-btn btn" type="submit" />
                 </form>
             </div>
         </div>

@@ -10,7 +10,7 @@ const AllServiceShow = () => {
         .then(data => setServices(data.slice()));
     },[])
     return (
-        <div>
+        <div className='CONTAINER'>
             
 
             <div>

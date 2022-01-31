@@ -7,10 +7,10 @@ const TravelProducts = () => {
     return (
         <div className='container mx-auto'>
         <h1 className='text-center'>beautiful place</h1>    
-<div className='row'>
+<div className='row '>
 
 
-<div className='col-md-6 shadow  rounded-3 ID '>
+<div className='col-md-6 shadow  rounded-3 ID PICK'>
 
 
 
@@ -31,7 +31,7 @@ All songs are written, arranged and produced by Schütz, with the exception of O
         
     </div>
 </div>
-<div className='col-md-6  rounded-3 shadow Shadow2'>
+<div className='col-md-6  rounded-3 shadow Shadow2 PICK'>
 
 
 
